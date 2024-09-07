@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+\\\<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -33,6 +33,7 @@
             display: flex;
             justify-content: center;
             gap: 20px;
+            padding: 10px 0;
         }
 
         nav a {
@@ -59,6 +60,7 @@
             text-decoration: none;
             border-radius: 5px;
             font-size: 1.2em;
+            margin-top: 50px;
         }
 
         #features, #commands, #getbot, #contact {
@@ -68,11 +70,14 @@
 
         .feature-container {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
         .feature {
             max-width: 300px;
+            margin: 0 auto;
         }
 
         form {
@@ -83,7 +88,8 @@
         }
 
         form input, form textarea {
-            width: 100%;
+            width: 80%;
+            max-width: 600px;
             padding: 10px;
             border-radius: 5px;
             border: none;
@@ -103,6 +109,11 @@
             padding: 20px;
             text-align: center;
             color: white;
+        }
+
+        a:focus, button:focus {
+            outline: 2px solid #ff4500;
+            outline-offset: 4px;
         }
     </style>
 </head>
@@ -162,12 +173,14 @@
 
     <section id="contact">
         <h2>Contact Us</h2>
-        <form action="#" method="POST">
+        <form action="YOUR_FORM_ACTION_URL_HERE" method="POST">
             <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="email" name="email" value="rasoulfam9@gmail.com" readonly>
             <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
             <button type="submit">Send</button>
         </form>
+        <p>Or reach out to me on Discord: <strong>dm_to_partner123427</strong></p>
+        <p>Join our Discord server: <a href="https://discord.gg/YZEQaKtEvc" target="_blank">Join Here</a></p>
     </section>
 
     <footer>
@@ -177,7 +190,7 @@
     <script>
         // Keeping the bot alive by pinging a server every 5 minutes (optional)
         setInterval(() => {
-            fetch('https://discord.gg/YZEQaKtEvc').then(response => console.log('Keep-alive ping sent.'));
+            fetch('YOUR_SERVER_URL_HERE').then(response => console.log('Keep-alive ping sent.'));
         }, 300000); // 5 minutes
     </script>
 </body>
