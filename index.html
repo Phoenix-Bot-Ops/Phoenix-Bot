@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phoenix Bot - Discord Bot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: white;
+        }
+
+        header {
+            background-color: #ff4500;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #ffffff;
+            font-size: 2.5em;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        #hero {
+            background: linear-gradient(90deg, rgba(255,69,0,1) 0%, rgba(255,165,0,1) 100%);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        #hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .cta-btn {
+            background-color: #ff4500;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
+
+        #features, #commands, #getbot, #contact {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .feature-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .feature {
+            max-width: 300px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            background-color: #ff4500;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Phoenix Bot</h1>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#commands">Bot Commands</a></li>
+                <li><a href="#getbot">Get Phoenix Bot</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Unleash the Power of Phoenix Bot!</h2>
+            <p>The ultimate Discord bot for IP lookups, user information, and much more.</p>
+            <a href="#getbot" class="cta-btn">Add Phoenix Bot</a>
+        </div>
+    </section>
+
+    <section id="features">
+        <h2>Features</h2>
+        <div class="feature-container">
+            <div class="feature">
+                <h3>IP Lookup</h3>
+                <p>Retrieve detailed information about any IP address with ease.</p>
+            </div>
+            <div class="feature">
+                <h3>User Lookup</h3>
+                <p>Get quick information on any Discord user with a single command.</p>
+            </div>
+            <div class="feature">
+                <h3>Keep Alive</h3>
+                <p>The bot stays online with our keep-alive feature to ensure non-stop service.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="commands">
+        <h2>Bot Commands</h2>
+        <ul>
+            <li><strong>!ip [address]</strong> - Get detailed information on the specified IP address.</li>
+            <li><strong>!lookup [user]</strong> - Look up detailed information on any Discord user.</li>
+            <li><strong>!ping</strong> - Check if the bot is online and its latency.</li>
+        </ul>
+    </section>
+
+    <section id="getbot">
+        <h2>Add Phoenix Bot to Your Server</h2>
+        <p>Click the button below to invite Phoenix Bot to your Discord server.</p>
+        <a href="https://discord.com/oauth2/authorize?client_id=1277957530852786308" class="cta-btn">Invite Phoenix Bot</a>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Phoenix Bot. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Keeping the bot alive by pinging a server every 5 minutes (optional)
+        setInterval(() => {
+            fetch('https://discord.gg/YZEQaKtEvc').then(response => console.log('Keep-alive ping sent.'));
+        }, 300000); // 5 minutes
+    </script>
+</body>
+</html>
